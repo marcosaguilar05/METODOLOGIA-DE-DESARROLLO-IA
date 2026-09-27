@@ -1,0 +1,97 @@
+# Modelo de artefactos
+
+## Identidad
+
+Formato recomendado:
+
+```text
+TYPE-NNNN
+```
+
+Ejemplos:
+
+- REQ-0001
+- RULE-0003
+- ADR-0002
+- TASK-0010
+- EVID-0007
+- CHG-0004
+
+La identidad permanece; la versión puede cambiar.
+
+## Estados universales
+
+- DRAFT
+- PROPOSED
+- IN_REVIEW
+- APPROVED
+- ACTIVE
+- AFFECTED
+- REVALIDATION_REQUIRED
+- STALE
+- BLOCKED
+- REJECTED
+- DEPRECATED
+- SUPERSEDED
+- ARCHIVED
+
+## Familias
+
+- PROJECT
+- INT
+- STK
+- SRC
+- UNK
+- ASM
+- REQ
+- AC
+- RULE
+- INV
+- DOM
+- EVT
+- DATA
+- ARCH
+- ADR
+- DEC
+- DRQ
+- TECH
+- API
+- UXF / UXC
+- POL
+- RISK
+- WVR
+- DEBT
+- TASK
+- EEC
+- CP
+- VC
+- VO
+- TEST
+- EVID
+- FIND
+- CHG
+- IMP
+- TR
+- REL
+
+## Relaciones principales
+
+- DERIVED_FROM
+- REFINES
+- DEPENDS_ON
+- REQUIRES
+- CONSTRAINS
+- IMPLEMENTS
+- SATISFIES
+- VERIFIED_BY
+- EVIDENCED_BY
+- AFFECTS
+- INVALIDATES
+- SUPERSEDES
+- CONFLICTS_WITH
+- USES
+- PRODUCES
+- APPROVED_BY
+- OWNED_BY
+- EXECUTED_BY
+- GOVERNED_BY
