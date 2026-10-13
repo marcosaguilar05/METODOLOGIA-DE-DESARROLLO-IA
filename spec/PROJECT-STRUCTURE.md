@@ -1,10 +1,11 @@
-# Estructura estándar de un proyecto GASE
+# Estructura estándar de un proyecto GASE v0.2 Pilot
 
 ```text
 mi-proyecto/
 │
 ├── METODOLOGIA-DE-DESARROLLO-IA/
 │   ├── GASE_CONTROL.md
+│   ├── gase.config.yaml
 │   ├── PROJECT.md
 │   ├── INTENT.md
 │   ├── SCOPE.md
@@ -15,6 +16,27 @@ mi-proyecto/
 │   ├── DATA.md
 │   ├── ARCHITECTURE.md
 │   ├── UX.md
+│   │
+│   ├── runtime/
+│   │   ├── ROUTER.md
+│   │   ├── CONTEXT_COMPILER.md
+│   │   ├── SKILL_REGISTRY.md
+│   │   ├── SESSION_HANDOFF.md
+│   │   └── VERIFICATION.md
+│   │
+│   ├── skills/
+│   │   ├── session/
+│   │   ├── feature/
+│   │   ├── debug/
+│   │   ├── refactor/
+│   │   ├── security/
+│   │   ├── domain/
+│   │   ├── verification/
+│   │   └── sync/
+│   │
+│   ├── tools/
+│   │   └── gase_doctor.py
+│   │
 │   ├── changes/
 │   ├── tasks/
 │   ├── decisions/
@@ -31,8 +53,33 @@ mi-proyecto/
 
 ## Separación
 
-`METODOLOGIA-DE-DESARROLLO-IA/` contiene gobernanza, conocimiento de ingeniería y entregables.
+`METODOLOGIA-DE-DESARROLLO-IA/` contiene:
+
+- gobernanza;
+- conocimiento de ingeniería;
+- runtime metodológico;
+- contexto;
+- evidencia;
+- entregables.
 
 El producto ejecutable vive fuera.
 
-Esta separación debe mantenerse incluso cuando una IA trabaje en ambos lados.
+## Regla de versión
+
+No crear carpetas `v0.2/`, `experimental/` o similares dentro de un proyecto.
+
+La estructura física se mantiene estable.
+
+La madurez de capacidades se expresa mediante metadata/configuración.
+
+## Regla del Runtime
+
+El Runtime no reemplaza archivos autoritativos.
+
+Solo decide qué cargar y qué workflow aplicar.
+
+## Portabilidad
+
+Usar referencias relativas al repositorio cuando sea posible.
+
+Evitar rutas `file:///C:/...` u otras rutas absolutas en artefactos persistentes.

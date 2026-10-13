@@ -1,0 +1,13 @@
+gase:
+  methodology_version: "0.2.0-pilot"
+  control_plane: "GASE_CONTROL.md"
+  router: "runtime/ROUTER.md"
+  skill_registry: "runtime/SKILL_REGISTRY.md"
+  context_compiler: "runtime/CONTEXT_COMPILER.md"
+  verification: "runtime/VERIFICATION.md"
+
+runtime:
+  load_policy: "on-demand"
+  persistent_memory: "repository"
+  external_memory_required: false
+  small_work_policy: "direct-when-safe"

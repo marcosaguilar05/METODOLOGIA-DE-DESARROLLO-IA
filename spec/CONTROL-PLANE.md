@@ -9,41 +9,58 @@ Debe responder rápidamente:
 - ¿Qué proyecto es?
 - ¿Qué Engineering State está activo?
 - ¿Qué fase está activa?
-- ¿Qué decisiones están vigentes?
-- ¿Qué incógnitas siguen abiertas?
-- ¿Qué tarea está activa?
-- ¿Qué debe leer la IA?
-- ¿Qué no debe asumir?
+- ¿Qué cambio/tarea está activo?
+- ¿Qué bloquea?
+- ¿Qué archivos debe leer la IA?
+- ¿Qué políticas son críticas?
 - ¿Cuál es la siguiente acción?
 
 ## Propiedades
 
-El Control Plane debe ser:
+Debe ser:
 
 - corto;
 - actualizado;
 - legible por humanos;
 - parseable por máquinas;
-- referencial, no duplicador de todo el conocimiento.
+- referencial;
+- portable.
+
+## No debe ser
+
+- historial completo;
+- copia de DECISIONS;
+- copia de REQUIREMENTS;
+- listado exhaustivo de evidencia;
+- sustituto del Engineering State.
 
 ## Regla de entrada
 
-Antes de realizar trabajo significativo:
-
 ```text
 READ GASE_CONTROL.md
+→ READ runtime/ROUTER.md
+→ COMPILE CONTEXT
 ```
+
+## Regla de contexto
+
+El Control Plane puede indicar artefactos obligatorios.
+
+El Runtime añade contexto según impacto y dominio.
 
 ## Regla de actualización
 
-Después de un cambio significativo:
+Después de un cambio material:
 
 ```text
-CHG
-→ artifacts affected
-→ Engineering State
-→ GASE_CONTROL.md
+CHANGE
+→ VERIFY
+→ UPDATE AUTHORITATIVE ARTIFACTS
+→ TRANSITION (si aplica)
+→ UPDATE GASE_CONTROL
 ```
+
+No es obligatorio crear un nuevo Engineering State por cada microcambio.
 
 ## Chat
 

@@ -1,4 +1,4 @@
-# START HERE — Cómo usar GASE en un proyecto real
+# START HERE — Cómo usar GASE v0.2 Pilot
 
 ## 1. Crea tu proyecto normal
 
@@ -16,7 +16,7 @@ Copia:
 template/METODOLOGIA-DE-DESARROLLO-IA/
 ```
 
-dentro de tu proyecto:
+dentro del proyecto:
 
 ```text
 gestion-inventario/
@@ -25,97 +25,115 @@ gestion-inventario/
 
 ## 3. Abre `GASE_CONTROL.md`
 
-Ese archivo es el **Control Plane**. La primera vez estará en modo `INITIALIZING`.
+Es el **Control Plane** y punto de entrada obligatorio.
 
-## 4. Habla con la IA usando `prompts/START_PROJECT.md`
+La primera vez estará en `INITIALIZING`.
 
-No necesitas saber ingeniería formal. Describe el proyecto con lenguaje natural.
+## 4. La IA entra por el Runtime
 
-La IA debe ayudarte a transformar esa intención en:
+La IA debe seguir:
 
-- `PROJECT`
-- `INTENT`
-- `SCOPE`
-- `UNKNOWNS`
-- `RIGOR`
-- primer `Engineering State`
+```text
+GASE_CONTROL.md
+→ runtime/ROUTER.md
+→ runtime/CONTEXT_COMPILER.md
+→ skills necesarias
+```
+
+No debe cargar todos los artefactos por defecto.
+
+## 5. Inicia el proyecto
+
+Puedes escribir en lenguaje natural o usar:
+
+```text
+prompts/START_PROJECT.md
+```
+
+La IA ayuda a producir:
+
+- PROJECT
+- INTENT
+- SCOPE
+- UNKNOWNS
+- rigor inicial
+- ES-0001
 
 sin inventar información.
 
-## 5. Discovery
+## 6. Discovery
 
-La IA resuelve contigo las incógnitas que realmente afectan las siguientes decisiones.
+Se resuelven únicamente las incógnitas necesarias para las siguientes decisiones.
 
-No se intenta diseñar todo de una vez.
+No es obligatorio diseñar todo antes de implementar.
 
-## 6. Cuando aparezca una decisión
+## 7. Clasificación operacional
 
-Se registra en:
+El Runtime clasifica el trabajo:
+
+### READ_ONLY
+Consulta o análisis. No crea artefactos de cambio.
+
+### DIRECT
+Cambio pequeño, local, reversible y verificable. Puede ejecutarse sin crear una cadena completa de CHG + TASK + EVID + ES.
+
+### GOVERNED
+Afecta reglas, datos, contratos, arquitectura, seguridad, integraciones o múltiples superficies. Usa gobernanza GASE completa según rigor.
+
+### CRITICAL
+Alto impacto, irreversibilidad, seguridad, datos sensibles u otras políticas críticas. Requiere mayor contexto, autoridad y evidencia.
+
+## 8. Decisiones
+
+Las decisiones durables se registran en:
 
 ```text
 DECISIONS.md
 ```
 
-o como ADR cuando sea arquitectónica:
+o mediante ADR cuando corresponda:
 
 ```text
 decisions/ADR-XXXX.md
 ```
 
-## 7. Cuando cambie algo importante
+## 9. Cambios
 
-Se crea:
+Los cambios significativos se registran en `changes/`.
 
-```text
-changes/CHG-XXXX.md
-```
+En R1/R2 se permite compresión física si se conservan las garantías del Kernel.
 
-y se actualiza `GASE_CONTROL.md`.
+## 10. Implementación
 
-## 8. Cuando una tarea esté lista
+La IA trabaja sobre el código real del proyecto (`src/`, `tests/`, etc.).
 
-Se crea:
+La carpeta metodológica gobierna y documenta; no contiene el runtime del producto.
 
-```text
-tasks/TASK-XXXX.md
-```
+## 11. Verificación
 
-La tarea debe especificar al menos:
-
-- intención;
-- scope;
-- contexto requerido;
-- autoridad;
-- criterio de aceptación;
-- verificación.
-
-## 9. La IA implementa
-
-La IA trabaja sobre el código real del proyecto (`src/`, `tests/`, etc.), no dentro de la carpeta metodológica.
-
-## 10. Evidencia
-
-Los resultados relevantes quedan vinculados desde:
+Antes de declarar finalización:
 
 ```text
-evidence/
+runtime/VERIFICATION.md
 ```
 
-## 11. Nuevo estado
+La evidencia debe provenir preferentemente de mecanismos deterministas: tests, build, lint, typecheck, checks de contratos, etc.
 
-Cuando el cambio es aceptado:
+## 12. Sincronización
 
-```text
-ES-0001 → ES-0002
-```
+Solo el conocimiento durable se promueve a la fuente de verdad:
 
-y se actualiza:
+- decisiones;
+- reglas;
+- arquitectura;
+- datos;
+- riesgos;
+- requisitos;
+- aprendizajes reutilizables;
+- Engineering State.
 
-```text
-state/
-GASE_CONTROL.md
-```
+No se debe crear ruido documental por cambios triviales.
 
 ## Regla de oro
 
-**La persona expresa intención. La IA estructura y ejecuta. Las herramientas prueban. El estado del proyecto conserva lo que quedó decidido.**
+**La persona expresa intención. La IA enruta, compila contexto, ejecuta y verifica. El proyecto conserva lo que quedó realmente decidido.**

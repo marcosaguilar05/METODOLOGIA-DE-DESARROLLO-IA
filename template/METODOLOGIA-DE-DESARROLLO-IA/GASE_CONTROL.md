@@ -1,17 +1,18 @@
 ---
 gase:
-  version: "0.1"
+  version: "0.2.0-pilot"
   artifact: "control_plane"
   project_id: "PROJECT-XXXX"
   engineering_state: "ES-0001"
   project_rigor: "UNASSESSED"
   phase: "INITIALIZING"
   status: "ACTIVE"
+  runtime_enabled: true
 ---
 
 # GASE CONTROL PLANE
 
-> Leer antes de realizar trabajo significativo.
+> Punto de entrada. Leer antes de realizar trabajo significativo.
 
 ## Estado actual
 
@@ -19,23 +20,19 @@ gase:
 - Engineering State: ES-0001
 - Rigor:
 - Fase: INITIALIZING
-- Tarea activa: NONE
+- Cambio/Tarea activa: NONE
 
 ## Intent
 
 Pendiente.
 
-## Alcance confirmado
+## Bloqueos actuales
 
 Pendiente.
 
-## Decisiones activas
+## Decisiones críticas vigentes
 
 Ninguna todavía.
-
-## Incógnitas abiertas
-
-Pendiente.
 
 ## Tecnología
 
@@ -43,8 +40,9 @@ UNDECIDED.
 
 No seleccionar stack hasta que exista suficiente información.
 
-## Archivos a leer para la tarea actual
+## Read Next
 
+- `runtime/ROUTER.md`
 - `PROJECT.md`
 - `INTENT.md`
 
@@ -52,12 +50,15 @@ No seleccionar stack hasta que exista suficiente información.
 
 1. No inventar información faltante.
 2. Diferenciar propuesta de decisión.
-3. Registrar incógnitas.
-4. Crear `CHG-*` para cambios significativos.
-5. No modificar silenciosamente decisiones activas.
-6. No seleccionar tecnología prematuramente.
-7. Actualizar este archivo cuando cambie el estado operacional.
+3. No cargar todo el historial por defecto.
+4. Compilar contexto con `runtime/CONTEXT_COMPILER.md`.
+5. Activar solo las skills necesarias.
+6. Registrar cambio formal únicamente cuando impacto/rigor lo exija.
+7. No modificar decisiones activas silenciosamente.
+8. No seleccionar tecnología prematuramente.
+9. Verificar antes de declarar finalización.
+10. Actualizar este archivo cuando cambie el estado operacional.
 
 ## Siguiente acción
 
-Completar inicio del proyecto usando `prompts/START_PROJECT.md`.
+Completar inicio del proyecto usando el Router y `prompts/START_PROJECT.md`.
