@@ -16,9 +16,9 @@ Hemos completado el siguiente hito / cambio técnico en la plataforma:
 
 Aplica el Runtime GASE v0.2 Pilot para consolidar el estado durable del proyecto siguiendo este protocolo:
 
-#### 1. Clasificación Operacional del Cambio (`runtime/ROUTER.md`)
+#### 1. Clasificación Operacional del Cambio (`runtime/router.yaml`)
 - Determina si el trabajo ejecutado califica como:
-  - **`DIRECT`**: Cambio pequeño, reversible, de bajo riesgo. Requiere actualización concisa de `GASE_CONTROL.md` y `state/ES-XXXX.md` con evidencia compacta (evitando burocracia documental de artefactos vacíos).
+  - **`DIRECT`**: Cambio pequeño, reversible, de bajo riesgo. Requiere actualización concisa de `GASE_CONTROL.yaml` y `state/ES-XXXX.md` con evidencia compacta (evitando burocracia documental de artefactos vacíos).
   - **`GOVERNED`**: Modificó contratos, reglas, datos, arquitectura, seguridad o múltiples superficies. Requiere gobernanza completa proporcional al nivel de rigor (`R1`, `R2`, `R3`).
   - **`CRITICAL`**: Afectó políticas de seguridad, datos sensibles, aislamiento multi-tenant o infraestructura crítica. Exige validación exhaustiva y evidencia formal.
 
@@ -32,7 +32,7 @@ Aplica el Runtime GASE v0.2 Pilot para consolidar el estado durable del proyecto
 - Incluye:
   - Versión activa de GASE y Rigor del proyecto.
   - Resumen ejecutivo del estado del sistema tras este hito.
-  - Invariantes y reglas de negocio preservadas (`RULES.md`).
+  - Invariantes y reglas de negocio preservadas (`RULES.yaml`).
   - Decisiones activas aplicadas (`DEC-XXX`).
   - Resumen de evidencia determinista verificada.
 
@@ -41,7 +41,7 @@ Aplica el Runtime GASE v0.2 Pilot para consolidar el estado durable del proyecto
 - **Entregable (`deliverables/DEL-XXXX.md`):** Lista de archivos, componentes, endpoints o contratos entregados.
 - **Evidencia (`evidence/EVD-XXXX.md`):** Logs deterministas de pruebas unitarias, build (`npm run build`, `pytest`), typechecks o linters.
 
-#### 5. Actualización del Tablero Central (`GASE_CONTROL.md`)
+#### 5. Actualización del Tablero Central (`GASE_CONTROL.yaml`)
 - Actualiza el puntero de **Engineering State** al nuevo `ES-XXXX`.
 - Actualiza la **Fase** y **Última Actualización** si corresponde.
 - Añade las nuevas decisiones `DEC-XXX` a la lista de vigentes.

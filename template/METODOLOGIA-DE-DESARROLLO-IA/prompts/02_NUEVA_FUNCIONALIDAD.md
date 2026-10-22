@@ -14,12 +14,12 @@ Necesito implementar la siguiente funcionalidad:
 
 ### ⚙️ Protocolo de Implementación Gobernado (Skill: `skills/feature/SKILL.md`):
 
-1. **Enrutamiento Operacional (`runtime/ROUTER.md`):**
+1. **Enrutamiento Operacional (`runtime/router.yaml`):**
    - Si afecta modelos de datos, reglas de negocio o contratos compartidos, trátala como **`GOVERNED`**.
    - Si es un ajuste local y contenido, clasifícala como **`DIRECT`**.
 
-2. **Alineación de Contexto Mínimo (`runtime/CONTEXT_COMPILER.md`):**
-   - Consulta `REQUIREMENTS.md` y `RULES.md` para respetar invariantes de negocio.
+2. **Alineación de Contexto Mínimo (`runtime/context_compiler.yaml`):**
+   - Consulta `REQUIREMENTS.md` y `RULES.yaml` para respetar invariantes de negocio.
    - Si afecta datos o persistencia, revisa `DATA.md` y los modelos existentes.
    - Si afecta la arquitectura del sistema, consulta `ARCHITECTURE.md` y `DECISIONS.md`.
 

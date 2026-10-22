@@ -23,14 +23,14 @@ En un proyecto real:
 ```text
 mi-proyecto/
 ├── METODOLOGIA-DE-DESARROLLO-IA/
-│   ├── GASE_CONTROL.md
+│   ├── GASE_CONTROL.yaml
 │   ├── gase.config.yaml
 │   ├── PROJECT.md
 │   ├── INTENT.md
 │   ├── SCOPE.md
 │   ├── REQUIREMENTS.md
-│   ├── RULES.md
-│   ├── UNKNOWNS.md
+│   ├── RULES.yaml
+│   ├── UNKNOWNS.yaml
 │   ├── DECISIONS.md
 │   ├── DATA.md
 │   ├── ARCHITECTURE.md
@@ -58,7 +58,7 @@ mi-proyecto/
 Toda IA debe leer primero:
 
 ```text
-METODOLOGIA-DE-DESARROLLO-IA/GASE_CONTROL.md
+METODOLOGIA-DE-DESARROLLO-IA/GASE_CONTROL.yaml
 ```
 
 El Control Plane funciona como router hacia el estado y contexto vigente. No debe duplicar toda la historia del proyecto.
@@ -66,11 +66,11 @@ El Control Plane funciona como router hacia el estado y contexto vigente. No deb
 Cuando el Runtime está habilitado, el flujo recomendado es:
 
 ```text
-GASE_CONTROL.md
+GASE_CONTROL.yaml
   ↓
-runtime/ROUTER.md
+runtime/router.yaml
   ↓
-runtime/CONTEXT_COMPILER.md
+runtime/context_compiler.yaml
   ↓
 skills necesarias
   ↓

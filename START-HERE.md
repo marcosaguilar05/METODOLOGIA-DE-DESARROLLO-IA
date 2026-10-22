@@ -23,7 +23,7 @@ gestion-inventario/
 └── METODOLOGIA-DE-DESARROLLO-IA/
 ```
 
-## 3. Abre `GASE_CONTROL.md`
+## 3. Abre `GASE_CONTROL.yaml`
 
 Es el **Control Plane** y punto de entrada obligatorio.
 
@@ -34,9 +34,9 @@ La primera vez estará en `INITIALIZING`.
 La IA debe seguir:
 
 ```text
-GASE_CONTROL.md
-→ runtime/ROUTER.md
-→ runtime/CONTEXT_COMPILER.md
+GASE_CONTROL.yaml
+→ runtime/router.yaml
+→ runtime/context_compiler.yaml
 → skills necesarias
 ```
 

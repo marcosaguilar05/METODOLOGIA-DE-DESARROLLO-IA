@@ -8,12 +8,12 @@ Actúa como el **Líder Técnico de Ingeniería de Software** para el proyecto: 
 ### 🚀 Protocolo de Arranque Operativo (Skill: `skills/session/SKILL.md`):
 
 1. **Lectura y Gobernanza Inicial:**
-   - Lee prioritariamente el Control Plane: `METODOLOGIA-DE-DESARROLLO-IA/GASE_CONTROL.md`.
+   - Lee prioritariamente el Control Plane: `METODOLOGIA-DE-DESARROLLO-IA/GASE_CONTROL.yaml`.
    - Lee el snapshot activo del Engineering State indicado en el Control Plane (`state/ES-XXXX.md`).
    - Si existe handoff reciente de sesión anterior, revisa `runtime/SESSION_HANDOFF.md`.
-   - Consulta las reglas aplicables en `RULES.md` y las decisiones vigentes en `DECISIONS.md`.
+   - Consulta las reglas aplicables en `RULES.yaml` y las decisiones vigentes en `DECISIONS.md`.
 
-2. **Compilación de Contexto Mínimo (`runtime/CONTEXT_COMPILER.md`):**
+2. **Compilación de Contexto Mínimo (`runtime/context_compiler.yaml`):**
    - No cargues historiales obsoletos ni artefactos innecesarios por defecto.
    - Compila únicamente el contexto requerido para el objetivo de esta sesión.
 
@@ -31,5 +31,5 @@ Actúa como el **Líder Técnico de Ingeniería de Software** para el proyecto: 
 
 ---
 
-Indícame brevemente tu entendimiento del estado actual, las clasificaciones operacionales identificadas (`runtime/ROUTER.md`) y el plan de pasos propuesto para comenzar.
+Indícame brevemente tu entendimiento del estado actual, las clasificaciones operacionales identificadas (`runtime/router.yaml`) y el plan de pasos propuesto para comenzar.
 ```

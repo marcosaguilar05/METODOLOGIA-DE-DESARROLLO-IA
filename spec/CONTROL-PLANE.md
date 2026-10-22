@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-`GASE_CONTROL.md` es el punto de entrada operativo para humanos y agentes.
+`GASE_CONTROL.yaml` es el punto de entrada operativo para humanos y agentes.
 
 Debe responder rápidamente:
 
@@ -37,8 +37,8 @@ Debe ser:
 ## Regla de entrada
 
 ```text
-READ GASE_CONTROL.md
-→ READ runtime/ROUTER.md
+READ GASE_CONTROL.yaml
+→ READ runtime/router.yaml
 → COMPILE CONTEXT
 ```
 

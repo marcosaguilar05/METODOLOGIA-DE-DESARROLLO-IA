@@ -1,6 +1,6 @@
 # Prompt — REQUEST CHANGE
 
-> Lee primero `METODOLOGIA-DE-DESARROLLO-IA/GASE_CONTROL.md`.
+> Lee primero `METODOLOGIA-DE-DESARROLLO-IA/GASE_CONTROL.yaml`.
 > Quiero proponer el siguiente cambio:
 >
 > [DESCRIBIR CAMBIO]

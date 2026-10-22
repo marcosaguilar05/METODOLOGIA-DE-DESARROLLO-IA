@@ -14,7 +14,7 @@ Necesito modelar o modificar la siguiente entidad / contrato de datos:
 
 ### 🗄️ Protocolo de Dominio y Persistencia (Skill: `skills/domain/SKILL.md`):
 
-1. **Gobernanza de Datos (`DATA.md` & `RULES.md`):**
+1. **Gobernanza de Datos (`DATA.md` & `RULES.yaml`):**
    - Asegurar coherencia con el modelo de datos documentado en `DATA.md`.
    - Garantizar el aislamiento de datos (por ejemplo, multi-tenancy o segmentación obligatoria por empresa/usuario).
    - Validar restricciones de integridad referencial, índices para consultas frecuentes y transacciones con commit/rollback atómico.

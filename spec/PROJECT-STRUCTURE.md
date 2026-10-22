@@ -4,23 +4,23 @@
 mi-proyecto/
 │
 ├── METODOLOGIA-DE-DESARROLLO-IA/
-│   ├── GASE_CONTROL.md
+│   ├── GASE_CONTROL.yaml
 │   ├── gase.config.yaml
 │   ├── PROJECT.md
 │   ├── INTENT.md
 │   ├── SCOPE.md
 │   ├── REQUIREMENTS.md
-│   ├── RULES.md
-│   ├── UNKNOWNS.md
+│   ├── RULES.yaml
+│   ├── UNKNOWNS.yaml
 │   ├── DECISIONS.md
 │   ├── DATA.md
 │   ├── ARCHITECTURE.md
 │   ├── UX.md
 │   │
 │   ├── runtime/
-│   │   ├── ROUTER.md
-│   │   ├── CONTEXT_COMPILER.md
-│   │   ├── SKILL_REGISTRY.md
+│   │   ├── router.yaml
+│   │   ├── context_compiler.yaml
+│   │   ├── skill_registry.yaml
 │   │   ├── SESSION_HANDOFF.md
 │   │   └── VERIFICATION.md
 │   │

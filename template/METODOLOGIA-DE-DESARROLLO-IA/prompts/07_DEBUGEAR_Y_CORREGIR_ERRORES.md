@@ -31,7 +31,7 @@ Tengo un error que requiere diagnóstico de causa raíz y corrección definitiva
    - Valida que la suite general de pruebas y el proceso de compilación (`build`) continúen en verde.
 
 4. **Sincronización de Aprendizaje:**
-   - Si el bug reveló una incógnita resuelta o una restricción no documentada, indícala para su registro en `UNKNOWNS.md` o `RULES.md`.
+   - Si el bug reveló una incógnita resuelta o una restricción no documentada, indícala para su registro en `UNKNOWNS.yaml` o `RULES.yaml`.
 
 Presenta la explicación de causa raíz, la propuesta de solución y el código corregido con comentarios en **estricto idioma español**.
 ```
