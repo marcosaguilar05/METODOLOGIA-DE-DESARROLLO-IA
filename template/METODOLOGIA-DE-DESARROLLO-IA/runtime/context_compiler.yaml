@@ -1,0 +1,59 @@
+version: "1.0"
+artifact: "context_compiler"
+
+principle: "History != default context. El contexto debe ser suficiente, no máximo."
+
+layers:
+  L0:
+    name: "Core"
+    description: "Control plane, tarea activa y reglas críticas del sistema."
+    always_loaded: true
+    files:
+      - "GASE_CONTROL.yaml"
+      - "RULES.yaml"
+
+  L1:
+    name: "Work Type"
+    description: "Contexto normativo y funcional según el tipo de tarea a realizar."
+    mapping:
+      feature:
+        - "INTENT.md"
+        - "SCOPE.md"
+        - "REQUIREMENTS.md"
+      debug:
+        - "evidence/recent"
+        - "changes/recent"
+      refactor:
+        - "ARCHITECTURE.md"
+        - "RULES.yaml"
+      security:
+        - "RULES.yaml"
+        - "DATA.md"
+        - "spec/RIGOR-LEVELS.md"
+      domain:
+        - "DATA.md"
+        - "RULES.yaml"
+
+  L2:
+    name: "Domain"
+    description: "Módulo o superficie técnica específica afectada por el trabajo."
+    rule: "Cargar únicamente la sección o archivo del dominio en cuestión, no todo el sistema."
+    files:
+      - "DATA.md"
+      - "UX.md"
+
+  L3:
+    name: "Execution"
+    description: "Archivos de código fuente, interfaces y tests necesarios para ejecutar el cambio."
+    files:
+      - "src/"
+      - "tests/"
+
+  L4:
+    name: "History"
+    description: "Trazabilidad histórica completa, ADRs antiguos y estados pasados."
+    rule: "Cargar ÚNICAMENTE bajo demanda explícita para auditoría, reconstrucción o arbitraje de decisiones."
+    files:
+      - "decisions/"
+      - "changes/"
+      - "state/"

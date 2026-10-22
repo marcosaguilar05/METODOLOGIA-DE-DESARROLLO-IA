@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 0.2.1-pilot (YAML Hybrid Runtime)
+
+Evolución de eficiencia para agentes y reducción de huella de contexto.
+
+### Añadido
+
+- Soporte nativo para estado y runtime en YAML puro:
+  - `GASE_CONTROL.yaml` (Control Plane ultra-ligero y tipado).
+  - `RULES.yaml` (Invariantes de negocio con IDs y severidad explícita).
+  - `UNKNOWNS.yaml` (Matriz de incógnitas y bloqueos).
+  - `runtime/router.yaml` (Clasificación operativa y reglas).
+  - `runtime/skill_registry.yaml` (Registro estructurado de skills).
+  - `runtime/context_compiler.yaml` (Matriz declarativa L0-L4).
+- Validación de sintaxis YAML en `gase_doctor.py`.
+- Detección flexible de directorio en `gase_doctor.py` para auditar tanto el template como proyectos en producción.
+
+---
+
 ## 0.2.0-pilot
 
 Primera evolución basada en uso real.

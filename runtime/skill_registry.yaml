@@ -1,0 +1,59 @@
+version: "1.0"
+artifact: "skill_registry"
+
+skills:
+  session:
+    purpose: "Iniciar o retomar una sesión de ingeniería"
+    path: "skills/session/SKILL.md"
+    triggers: ["start", "resume", "handoff", "retomar", "inicio"]
+    inputs: ["GASE_CONTROL.yaml"]
+    outputs: ["Contexto activo cargado", "Determinación de tarea en curso"]
+
+  feature:
+    purpose: "Diseño e implementación de nueva funcionalidad"
+    path: "skills/feature/SKILL.md"
+    triggers: ["feature", "nueva_funcionalidad", "requerimiento", "historia"]
+    inputs: ["INTENT.md", "REQUIREMENTS.md", "RULES.yaml"]
+    outputs: ["CHG-xxxx", "TASK-xxxx", "Código en src/", "Tests en tests/"]
+
+  debug:
+    purpose: "Diagnóstico y resolución sistemática de errores y fallos"
+    path: "skills/debug/SKILL.md"
+    triggers: ["bug", "error", "falla_test", "excepcion", "defecto"]
+    inputs: ["Error trace / logs", "Código afectado"]
+    outputs: ["Reproducción de falla", "Fix mínimo", "Test de regresión", "EVID-xxxx"]
+
+  refactor:
+    purpose: "Mejora estructural interna del código sin alterar comportamiento observable"
+    path: "skills/refactor/SKILL.md"
+    triggers: ["refactor", "deuda_tecnica", "limpieza", "modularizar"]
+    inputs: ["Código existente", "Suite de tests existente"]
+    outputs: ["Código refactorizado", "Evidencia de tests pasando"]
+
+  security:
+    purpose: "Validación de permisos, secretos, autenticación y superficies de ataque"
+    path: "skills/security/SKILL.md"
+    triggers: ["auth", "permisos", "secretos", "cifrado", "cve", "vulnerabilidad"]
+    inputs: ["RULES.yaml", "DATA.md", "Módulos de seguridad"]
+    outputs: ["Auditoría", "Implementación segura", "Tests de seguridad"]
+
+  domain:
+    purpose: "Modelado y evolución de lógica de negocio, entidades e invariantes"
+    path: "skills/domain/SKILL.md"
+    triggers: ["entidad", "modelo", "regla_negocio", "evento_dominio"]
+    inputs: ["DATA.md", "RULES.yaml"]
+    outputs: ["Esquemas actualizados", "Entidades", "Invariantes verificadas"]
+
+  verification:
+    purpose: "Comprobación estricta de cambios y generación de evidencia auditable"
+    path: "skills/verification/SKILL.md"
+    triggers: ["verificar", "test", "cerrar_tarea", "evaluar_cambio"]
+    inputs: ["Criterios de aceptación", "Comandos de test"]
+    outputs: ["EVID-xxxx", "Resultado PASS/FAIL"]
+
+  sync:
+    purpose: "Promover conocimiento durable hacia el Engineering State"
+    path: "skills/sync/SKILL.md"
+    triggers: ["guardar_estado", "bump_es", "cerrar_cambio", "sincronizar"]
+    inputs: ["EVID-xxxx", "CHG-xxxx"]
+    outputs: ["GASE_CONTROL.yaml actualizado", "Nuevo ES-xxxx"]

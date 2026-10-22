@@ -212,3 +212,21 @@ El repositorio puede ser la memoria durable.
 Un proyecto v0.1 puede adoptar la capa Runtime de forma aditiva.
 
 No es necesario migrar retrospectivamente toda la historia.
+
+## 16. Dualidad de formatos (YAML / Markdown)
+
+Para reducir la huella de tokens y eliminar la ambigüedad en la manipulación del estado por parte de agentes y herramientas:
+
+1. **Artefactos de estado estructurado y configuración** pueden expresarse en YAML puro:
+   - `GASE_CONTROL.yaml`
+   - `RULES.yaml`
+   - `UNKNOWNS.yaml`
+   - `runtime/router.yaml`
+   - `runtime/skill_registry.yaml`
+   - `runtime/context_compiler.yaml`
+2. **Artefactos de razonamiento humano y visión técnica** permanecen en Markdown:
+   - `INTENT.md`, `PROJECT.md`, `SCOPE.md`
+   - `ARCHITECTURE.md` (diagramas y flujos)
+   - `decisions/ADR-XXXX.md` (argumentación y trade-offs)
+3. Las herramientas deterministas (`gase_doctor.py`) deben soportar e inspeccionar de forma agnóstica ambos formatos.
+

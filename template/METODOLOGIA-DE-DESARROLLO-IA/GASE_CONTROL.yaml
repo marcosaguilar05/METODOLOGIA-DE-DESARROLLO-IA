@@ -1,0 +1,32 @@
+gase_version: "0.2.1-pilot"
+artifact: "control_plane"
+project_id: "PROJECT-XXXX"
+engineering_state: "ES-0001"
+rigor: "UNASSESSED" # R0, R1, R2, R3
+phase: "INITIALIZING" # INITIALIZING, DISCOVERY, DESIGN, IMPLEMENTATION, VERIFICATION, STABILIZED
+status: "ACTIVE"
+runtime_enabled: true
+
+current_work:
+  active_change: null
+  active_task: null
+  operational_class: null # READ_ONLY, DIRECT, GOVERNED, CRITICAL
+
+blockers: []
+
+critical_decisions: []
+
+tech_stack:
+  status: "UNDECIDED"
+  selected: []
+
+read_next:
+  - "runtime/router.yaml"
+  - "PROJECT.md"
+  - "INTENT.md"
+
+rules_summary:
+  total: 0
+  critical: 0
+
+next_action: "Completar inicio del proyecto con router y prompts/START_PROJECT.md"

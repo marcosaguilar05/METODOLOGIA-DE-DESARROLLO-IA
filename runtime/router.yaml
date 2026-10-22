@@ -1,0 +1,50 @@
+version: "1.0"
+artifact: "runtime_router"
+
+rule: "La profundidad visible del proceso debe ser proporcional al riesgo."
+
+classes:
+  READ_ONLY:
+    description: "Consulta, análisis, explicación o inspección sin impacto en código ni estado."
+    requires_context: ["L0"]
+    creates_artifacts: false
+    requires_verification: false
+    examples:
+      - "¿Cómo está estructurado el módulo de usuarios?"
+      - "Explícame qué hace la regla RULE-0001"
+
+  DIRECT:
+    description: "Cambio local, reversible, bajo impacto y verificable inmediatamente sin alterar contratos ni arquitectura."
+    requires_context: ["L0", "L3"]
+    creates_artifacts: false
+    requires_verification: true
+    verification_mode: "lightweight"
+    examples:
+      - "Corregir un typo en texto de UI"
+      - "Añadir un test unitario simple a una función pura"
+      - "Ajuste de estilo o documentación interna de código"
+
+  GOVERNED:
+    description: "Cambio material en reglas de negocio, datos, contratos, arquitectura o multi-superficie."
+    requires_context: ["L0", "L1", "L2", "L3"]
+    creates_artifacts: true
+    artifacts_pipeline: ["CHG", "TASK", "EVID", "ES"]
+    requires_verification: true
+    verification_mode: "full"
+    examples:
+      - "Nueva funcionalidad de negocio"
+      - "Modificación de endpoints de API existente"
+      - "Cambio de esquema en base de datos"
+
+  CRITICAL:
+    description: "Alta criticidad, irreversibilidad, autenticación, permisos, criptografía o datos sensibles."
+    requires_context: ["L0", "L1", "L2", "L3", "L4"]
+    creates_artifacts: true
+    artifacts_pipeline: ["ADR", "CHG", "TASK", "EVID", "ES"]
+    requires_human_approval: true
+    requires_verification: true
+    verification_mode: "exhaustive"
+    examples:
+      - "Migración o borrado masivo de datos"
+      - "Cambio en algoritmo de hashing o manejo de tokens de sesión"
+      - "Transición de arquitectura central"

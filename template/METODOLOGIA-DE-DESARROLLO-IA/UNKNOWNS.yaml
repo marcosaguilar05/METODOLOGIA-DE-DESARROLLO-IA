@@ -1,0 +1,11 @@
+version: "1.0"
+artifact: "unknowns"
+
+unknowns:
+  - id: "UNK-0001"
+    status: "OPEN" # OPEN, IN_INVESTIGATION, RESOLVED, DISCARDED
+    blocking_level: "NON-BLOCKING" # BLOCKING, NON-BLOCKING
+    question: "Pregunta o incertidumbre técnica/funcional por resolver"
+    why_it_matters: "Justificación de por qué importa resolver esta duda"
+    blocks_decision: null # e.g. "ADR-0001" o null
+    resolution: null # Explicación de la resolución cuando cambie a RESOLVED

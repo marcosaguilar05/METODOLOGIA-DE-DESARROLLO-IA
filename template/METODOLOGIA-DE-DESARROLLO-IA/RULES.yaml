@@ -1,0 +1,11 @@
+version: "1.0"
+artifact: "business_rules"
+
+rules:
+  - id: "RULE-0001"
+    status: "DRAFT" # DRAFT, APPROVED, ACTIVE, DEPRECATED
+    name: "Regla inicial de ejemplo"
+    rule: "Descripción clara, unívoca y verificable de la regla o invariante de negocio."
+    origin: "Requisito funcional o restricción de dominio"
+    affected_requirements: [] # e.g. ["REQ-0001"]
+    severity: "HIGH" # LOW, MEDIUM, HIGH, CRITICAL

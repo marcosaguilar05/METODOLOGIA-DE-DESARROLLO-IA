@@ -1,10 +1,12 @@
 gase:
-  methodology_version: "0.2.0-pilot"
-  control_plane: "GASE_CONTROL.md"
-  router: "runtime/ROUTER.md"
-  skill_registry: "runtime/SKILL_REGISTRY.md"
-  context_compiler: "runtime/CONTEXT_COMPILER.md"
+  methodology_version: "0.2.1-pilot"
+  format_preference: "yaml" # "yaml" (recomendado, ligero) o "md"
+  control_plane: "GASE_CONTROL.yaml"
+  router: "runtime/router.yaml"
+  skill_registry: "runtime/skill_registry.yaml"
+  context_compiler: "runtime/context_compiler.yaml"
   verification: "runtime/VERIFICATION.md"
+  handoff: "runtime/SESSION_HANDOFF.md"
 
 runtime:
   load_policy: "on-demand"
